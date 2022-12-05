@@ -3,25 +3,35 @@ import express from "express";
 const app = express();
 const PORT = 8000;
 
-app.use("/api/v1/tasks", (req, res, next) => {
+app.get("/", (req, res, next) => {
   res.json({
-    message: "sup",
+    status: "OK",
+    message: "Hey wassup",
   });
 });
 
-app.get("/", (req, res, next) => {
-  res.json({
-    message: "Hey",
-  });
-});
 app.post("/", (req, res, next) => {
   res.json({
-    message: "Hey sup",
+    status: "Success",
+    message: "successfully posted",
+  });
+});
+
+app.patch("/", (req, res, next) => {
+  res.json({
+    status: "Success",
+    message: "successfully posted",
+  });
+});
+app.delete("/", (req, res, next) => {
+  res.json({
+    status: "Success",
+    message: "successfully posted",
   });
 });
 
 app.listen(PORT, (error) => {
   error
     ? console.log(error)
-    : console.log(`you server running at http://localhost:${PORT} `);
+    : console.log(`your server is runnning at http://localhost:${PORT}`);
 });
