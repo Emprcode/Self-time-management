@@ -4,15 +4,11 @@ import taskRouter from "./src/routers/taskRouter.js";
 const app = express();
 const PORT = 8000;
 
-app.use("/api/v1/tasks/", taskRouter);
+app.use("/api/v1/task/", taskRouter);
 
 // handeling all uncaught router request
 
 app.use("*", (req, res, next) => {
-  // res.status(400).json({
-  //   status: "error",
-  //   message: "404 not found",
-  // });
   const error = {
     code: 404,
     message: "404 not found",

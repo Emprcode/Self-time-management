@@ -14,7 +14,7 @@ router.get("/", (req, res, next) => {
     res.json({
       status: "Success",
       message: "successfully posted",
-    });
+    });  
   });
   
   router.patch("/", (req, res, next) => {
