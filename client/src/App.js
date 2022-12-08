@@ -1,14 +1,16 @@
 import "./App.css";
 import { Title } from "./components/Title";
-import { searchBar } from "./components/searchBar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { SearchBar } from "./components/SearchBar";
 
 function App() {
   return (
-    <div className="App">
-      {/* title */}
-      <Title />
-      <searchBar />
+    <div className="wrapper">
+      <div className="container">
+        {/* title */}
+        <Title />
+        <SearchBar />
+      </div>
     </div>
   );
 }
