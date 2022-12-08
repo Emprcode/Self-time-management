@@ -1,5 +1,6 @@
 import "./App.css";
 import { Title } from "./components/Title";
+import { searchBar } from "./components/searchBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       {/* title */}
       <Title />
+      <searchBar />
     </div>
   );
 }
