@@ -4,6 +4,9 @@ import taskRouter from "./src/routers/taskRouter.js";
 const app = express();
 const PORT = 8000;
 
+// middleware
+app.use(express());
+
 app.use("/api/v1/task/", taskRouter);
 
 // handeling all uncaught router request
