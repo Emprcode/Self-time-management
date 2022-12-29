@@ -7,7 +7,7 @@ const PORT = 8000;
 // middleware
 app.use(express());
 
-app.use("/api/v1/task/", taskRouter);
+app.use("/api/v1/task", taskRouter);
 
 // handeling all uncaught router request
 
